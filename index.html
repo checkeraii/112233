@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eyzan.io</title>
+  <meta name="description" content="Eyzan.io - Innovative Project Showcase" />
+  <meta property="og:title" content="eyzan.io" />
+  <meta property="og:description" content="Showcasing our innovative project." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://eyzan.io/" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Alpine.js CDN -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Hero -->
+  <section id="hero" class="relative bg-gray-900">
+    <div class="h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+      <div class="bg-black bg-opacity-50 p-8 rounded-lg max-w-2xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Innovate Your Future</h1>
+        <p class="text-lg text-gray-200 mb-6">Transforming ideas into reality with cutting-edge technology.</p>
+        <a href="#about" class="inline-block bg-[#E94560] text-white px-6 py-3 rounded transition hover:bg-[#0F3460]">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-7xl mx-auto px-4 py-16 bg-white">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Our Mission</h2>
+      <p class="max-w-2xl mx-auto text-gray-700">Eyzan.io aims to revolutionize the way you experience technology, providing innovative solutions that empower your business and personal growth.</p>
+    </div>
+    <div class="grid md:grid-cols-4 gap-8">
+      <!-- Feature 1 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <div class="flex justify-center mb-4">
+          <!-- Icon -->
+          <svg class="w-12 h-12 text-[#E94560]" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L15 8H9L12 2zM4 10v10h16V10H4zm8 4a2 2 0 100-4 2 2 0 000 4z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">Innovation</h3>
+        <p class="text-gray-600 text-center text-sm">Pushing boundaries with groundbreaking ideas and solutions.</p>
+      </div>
+      <!-- Feature 2 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <div class="flex justify-center mb-4">
+          <!-- Icon -->
+          <svg class="w-12 h-12 text-[#E94560]" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 4a8 8 0 00-8 8c0 4.418 3.582 8 8 8s8-3.582 8-8a8 8 0 00-8-8zm0 14a6 6 0 110-12 6 6 0 010 12z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">Collaboration</h3>
+        <p class="text-gray-600 text-center text-sm">Building strong partnerships for mutual growth.</p>
+      </div>
+      <!-- Feature 3 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <div class="flex justify-center mb-4">
+          <!-- Icon -->
+          <svg class="w-12 h-12 text-[#E94560]" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H8v-2h4v2zm0-4H8V7h4v6z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">Reliability</h3>
+        <p class="text-gray-600 text-center text-sm">Ensuring consistent quality and performance.</p>
+      </div>
+      <!-- Feature 4 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <div class="flex justify-center mb-4">
+          <!-- Icon -->
+          <svg class="w-12 h-12 text-[#E94560]" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 12c2.21 0 4-1.79 4-4V4h-8v4c0 2.21 1.79 4 4 4zM4 20v-2c0-2.21 3.58-4 8-4s8 1.79 8 4v2H4z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center">Support</h3>
+        <p class="text-gray-600 text-center text-sm">Dedicated to helping our users succeed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="max-w-7xl mx-auto px-4 py-16 bg-gray-50" x-data="{ open: false, src: '' }">
+    <h2 class="text-3xl font-semibold text-center mb-8">Gallery</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <!-- Unique images for gallery -->
+      <div>
+        <button @click="open = true; src='https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" class="w-full aspect-w-4 aspect-h-3 overflow-hidden rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E94560]">
+          <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60" alt="Gallery Image 1" loading="lazy" class="w-full h-full object-cover transition-transform duration-200 hover:scale-105" />
+        </button>
+      </div>
+      <div>
+        <button @click="open = true; src='https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" class="w-full aspect-w-4 aspect-h-3 overflow-hidden rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E94560]">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60" alt="Gallery Image 2" loading="lazy" class="w-full h-full object-cover transition-transform duration-200 hover:scale-105" />
+        </button>
+      </div>
+      <div>
+        <button @click="open = true; src='https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" class="w-full aspect-w-4 aspect-h-3 overflow-hidden rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E94560]">
+          <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60" alt="Gallery Image 3" loading="lazy" class="w-full h-full object-cover transition-transform duration-200 hover:scale-105" />
+        </button>
+      </div>
+    </div>
+    <!-- Lightbox -->
+    <div x-show="open" @click.away="open = false" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 transition-opacity duration-300">
+      <div class="relative max-w-4xl w-full p-4">
+        <button @click="open = false" class="absolute top-2 right-2 text-white text-3xl">&times;</button>
+        <img :src="src" alt="Lightbox" class="w-full h-auto rounded-lg shadow-lg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="max-w-7xl mx-auto px-4 py-16 bg-white">
+    <h2 class="text-3xl font-semibold text-center mb-12">Roadmap</h2>
+    <div class="flex space-x-8 overflow-x-auto">
+      <!-- Milestone 1 -->
+      <div class="flex-shrink-0 w-48 text-center">
+        <div class="mx-auto mb-2 w-12 h-12 flex items-center justify-center bg-[#0F3460] text-white rounded-full">
+          <!-- Icon -->
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 4v16m8-8H4"></path>
+          </svg>
+        </div>
+        <div class="text-gray-700">Q2 2025<br/>Planning</div>
+      </div>
+      <!-- Milestone 2 -->
+      <div class="flex-shrink-0 w-48 text-center">
+        <div class="mx-auto mb-2 w-12 h-12 flex items-center justify-center bg-[#0F3460] text-white rounded-full">
+          <!-- Icon -->
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 6v6l4 2"></path>
+          </svg>
+        </div>
+        <div class="text-gray-700">Q3 2025<br/>Development</div>
+      </div>
+      <!-- Milestone 3 -->
+      <div class="flex-shrink-0 w-48 text-center">
+        <div class="mx-auto mb-2 w-12 h-12 flex items-center justify-center bg-[#0F3460] text-white rounded-full">
+          <!-- Icon -->
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M20 12H4"></path>
+          </svg>
+        </div>
+        <div class="text-gray-700">Q4 2025<br/>Beta Release</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="max-w-7xl mx-auto px-4 py-16 bg-gray-50">
+    <h2 class="text-3xl font-semibold text-center mb-8">Our Team</h2>
+    <div class="grid md:grid-cols-4 gap-8">
+      <!-- Founder 1 -->
+      <div class="text-center">
+        <img src="https://images.unsplash.com/photo-1544725196-7c40e5a8b1f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Founder Jane" class="w-24 h-24 mx-auto rounded-full object-cover mb-4" loading="lazy" />
+        <h3 class="text-lg font-semibold mb-1">Jane Doe</h3>
+        <p class="text-gray-600 mb-2">Founder & CEO</p>
+        <a href="https://linkedin.com/in/janedoe" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-sm">LinkedIn</a>
+      </div>
+      <!-- Founder 2 -->
+      <div class="text-center">
+        <img src="https://images.unsplash.com/photo-1544725193-0e0b8e3b4f2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Founder John" class="w-24 h-24 mx-auto rounded-full object-cover mb-4" loading="lazy" />
+        <h3 class="text-lg font-semibold mb-1">John Smith</h3>
+        <p class="text-gray-600 mb-2">Co-Founder & CTO</p>
+        <a href="https://linkedin.com/in/johnsmith" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-sm">LinkedIn</a>
+      </div>
+      <!-- Employee 1 -->
+      <div class="text-center">
+        <img src="https://images.unsplash.com/photo-1548999344-7e2d0f8b2f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Team Member" class="w-24 h-24 mx-auto rounded-full object-cover mb-4" loading="lazy" />
+        <h3 class="text-lg font-semibold mb-1">Alex Lee</h3>
+        <p class="text-gray-600 mb-2">Design Lead</p>
+        <a href="https://linkedin.com/in/alexlee" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-sm">LinkedIn</a>
+      </div>
+      <!-- Employee 2 -->
+      <div class="text-center">
+        <img src="https://images.unsplash.com/photo-1549925196-4f6b8b7f7a4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Team Member" class="w-24 h-24 mx-auto rounded-full object-cover mb-4" loading="lazy" />
+        <h3 class="text-lg font-semibold mb-1">Maria Garcia</h3>
+        <p class="text-gray-600 mb-2">Product Manager</p>
+        <a href="https://linkedin.com/in/mariagarcia" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-sm">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-7xl mx-auto px-4 py-16 bg-white">
+    <h2 class="text-3xl font-semibold text-center mb-8">Contact Us</h2>
+    <div class="max-w-2xl mx-auto">
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4" aria-label="Contact Form">
+        <div>
+          <label for="name" class="block mb-1 font-semibold">Name</label>
+          <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#E94560]" />
+        </div>
+        <div>
+          <label for="email" class="block mb-1 font-semibold">Email</label>
+          <input type="email" id="email" name="_replyto" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#E94560]" />
+        </div>
+        <div>
+          <label for="message" class="block mb-1 font-semibold">Message</label>
+          <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#E94560]"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-[#E94560] text-white px-4 py-2 rounded hover:bg-[#0F3460] transition">Send Message</button>
+      </form>
+      <!-- Social Icons -->
+      <div class="mt-8 flex justify-center space-x-6">
+        <!-- Twitter -->
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="text-gray-600 hover:text-[#E94560] transition">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14.86 4.48 4.48 0 002-2.48 9.3 9.3 0 01-2.88 1.1 4.52 4.52 0 00-7.72 4.13A12.94 12.94 0 013 4.62a4.52 4.52 0 001.39 6.04 4.48 4.48 0 01-2.05-.57v.06a4.52 4.52 0 003.63 4.43 4.52 4.52 0 01-2.04.08 4.52 4.52 0 004.2 3.13A9.05 9.05 0 012 19.54 12.94 12.94 0 008.29 21c7.547 0 11.675-6.155 11.675-11.49 0-.175-.004-.35-.012-.524A8.18 8.18 0 0023 3z"/>
+          </svg>
+        </a>
+        <!-- Discord -->
+        <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="text-gray-600 hover:text-[#E94560] transition">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.317 4.369a19.791 19.791 0 00-4.885-1.523.074.074 0 00-.08.037 13.89 13.89 0 00-1.581 3.221.074.074 0 00.045.095 13.69 13.69 0 009.046 2.608.074.074 0 00.084-.037 19.775 19.775 0 00-2.995-4.371zM8.332 15.046c-1.083 0-1.962.878-1.962 1.962 0 1.084.878 1.962 1.962 1.962 1.084 0 1.962-.878 1.962-1.962 0-1.084-.878-1.962-1.962-1.962zm7.336 0c-1.084 0-1.962.878-1.962 1.962 0 1.084.878 1.962 1.962 1.962 1.084 0 1.962-.878 1.962-1.962 0-1.084-.878-1.962-1.962-1.962z"/>
+            <path d="M20.317 4.369a19.791 19.791 0 00-4.885-1.523.074.074 0 00-.08.037 13.89 13.89 0 00-1.581 3.221.074.074 0 00.045.095 13.69 13.69 0 009.046 2.608.074.074 0 00.084-.037 19.775 19.775 0 00-2.995-4.371zM8.332 15.046c-1.083 0-1.962.878-1.962 1.962 0 1.084.878 1.962 1.962 1.962 1.084 0 1.962-.878 1.962-1.962 0-1.084-.878-1.962-1.962-1.962z" />
+          </svg>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-gray-600 hover:text-[#E94560] transition">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12 2a10 10 0 00-3.16 19.48c.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.45-1.14-1.11-1.44-1.11-1.44-.91-.62.07-.61.07-.61 1 .07 1.52 1.02 1.52 1.02.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.02-2.68-.1-.25-.44-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.564 9.564 0 0112 7.5c.85.004 1.71.115 2.5.338 1.9-1.29 2.74-1.02 2.74-1.02.55 1.38.2 2.4.1 2.65.63.7 1.02 1.59 1.02 2.68 0 3.85-2.34 4.7-4.56 4.95.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.68.48A10 10 0 0012 2z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Script -->
+  <script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('lightbox', () => ({
+        open: false,
+        src: '',
+        show(src) {
+          this.src = src;
+          this.open = true;
+        }
+      }));
+    });
+  </script>
+
+</body>
+</html>
